@@ -1,0 +1,353 @@
+body { /*estilos generales de la página*/
+	font-family: vcr;
+	text-transform: uppercase;
+	background-image: url(img/game.gif);
+}
+@font-face { /*Tipografía de la página*/
+	font-family: vcr;
+	src: url(vcr.ttf);
+}
+#contenedor { /*Div contenedor general: invisible para que se vea el gif de fondo*/
+	width: 80%;
+	max-width: 1000px;
+	background-color: transparent;
+	padding: 10px;
+	margin: 0 auto; 
+}
+header { /*header: titulo principal de la pagina y menú de navegación*/
+	text-align: center;
+	margin-bottom: 0px;
+}
+h1 { /*titulo principal: coleccion de juegos*/
+	text-align: center;
+	font-size: 55px;
+	color: white;
+	margin-bottom: 0px;
+}
+h2 { /*subtitulo principal: juegos*/
+	font-size: 30px;
+	margin-top: 5px;
+	color: white;
+}
+
+footer {
+	color: white;
+	background-color: rgb(36, 36, 36);
+	border: none;
+	border-radius: 0;
+	text-align: center;
+	padding: 10px;
+	letter-spacing: 0;
+	box-shadow: inset -2px -2px 0 #262626, inset 2px 2px 0 #f0f0f0, inset -4px -4px 0 #7e7e7e;
+	width: 50%;
+	max-width: 600px;
+	margin: 20px auto;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+h5, h6 { /*texto del footer*/
+	padding: 0.1em;
+	margin: 8px;
+	color: white;
+	font-size: 15px;
+}
+/*elementos ocultos*/
+.oculto {
+	display: none;
+}
+/*menú de navegación*/
+nav { 
+	font-size: 24px;
+	color: black;
+}
+ul {
+    margin: 20px;
+    padding: 0px;
+    list-style-type: none;
+    }
+li {
+    display: inline-block;
+    line-height: 44px;
+    }
+a {
+    background-color: whitesmoke;
+    padding: 8px 10px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+}
+a:hover {
+    background-color: #3135b5;
+    color: whitesmoke;
+}
+/*estilos botones general*/
+button {
+	background-color: #c3c3c3;
+	color: black;
+	font-family: vcr;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	padding: 10px 10px;
+	letter-spacing: 0;
+	box-shadow: inset -2px -2px 0 #262626, inset 2px 2px 0 #f0f0f0, inset -4px -4px 0 #7e7e7e;
+}
+button:hover {
+	background-color: #d9d9d9;
+    color: black;
+    cursor: pointer;
+}
+/*JUEGO DE PREGUNTAS*/
+/*Tarjeta de preguntas*/
+.tarjeta { /*tarjeta general*/
+	color: white;
+	background-color: rgb(36, 36, 36);
+	border: none;
+	border-radius: 0;
+	padding: 20px;
+	letter-spacing: 0;
+	box-shadow: inset -2px -2px 0 #262626, inset 2px 2px 0 #f0f0f0, inset -4px -4px 0 #7e7e7e;
+	width: 80%;
+	max-width: 720px;
+	margin: 20px auto;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+#numero { /*numero random para multiplicar puntaje en preguntas*/
+	background-color: whitesmoke;
+	color: black;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding: 5px;
+	margin: 10px auto;
+}
+article h3{ /*contenedor de datos de juegos en el index*/
+	text-align: center;
+}
+.tarjetaMulti { /*estilos tarjeta del area de multiplicar en las preguntas*/
+	color: white;
+	background-color: rgb(36, 36, 36);
+	border: none;
+	border-radius: 0;
+	padding: 20px;
+	letter-spacing: 0;
+	box-shadow: inset -2px -2px 0 #262626, inset 2px 2px 0 #f0f0f0, inset -4px -4px 0 #7e7e7e;
+	width: 50%;
+	max-width: 600px;
+	margin: 20px auto;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+#punt {
+	color: whitesmoke;
+}
+/*botones de preguntas*/
+.btn-comienzo { /*boton start*/
+	cursor: pointer;
+	width: 220px;
+}
+.boton-siguiente { /*boton next*/
+	font-size: 15px;
+	position: relative;
+	float: right;
+	font-weight: 500;
+}
+.boton-pista1 { /*botones de pista 1*/
+	font-size: 15px;
+	font-weight: 500;
+	margin: 5px;
+}
+.boton-pista2 { /*botones de pista 2*/
+	font-size: 15px;
+	font-weight: 500;
+	margin: 5px;
+}
+.control { /*div del boton start/end*/
+	display: flex;
+	justify-content: center;
+}
+/*elementos de las preguntas*/
+.pregunta { /*titulos de pregunta en cada tarjeta*/
+	font-size: 20px;
+	margin: 10px 50px;
+	text-align: center;
+}
+.inputs {  
+	display: flex;
+	justify-content: center;
+}
+input {
+	padding: 7px;
+	margin: 10px auto;
+	width: 50%;
+}
+/*Estilos imágenes*/
+#chicogamer {
+	display: block;
+	margin: 10px auto 10px auto;
+	width: 300px;
+}
+#img-play {
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 40px;
+}
+#gameboy {
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 250px;
+}
+#sonic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 180px;
+}
+#pacman {
+	display: block;
+	margin: 0px auto;
+	width: 180px;
+}
+#mario {
+	display: block;
+	margin: 5px auto;
+	width: 250px;
+}
+#arcade {
+	display: block;
+	margin: 5px auto 10px auto;
+	width: 250px;
+}
+#donkey {
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 250px;
+}
+#space{
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 250px;
+}
+#arkanoid{
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 250px;
+}
+#tetris{
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 270px;
+}
+#pinball{
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 270px;
+}
+#crash {
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 270px;
+}
+#dadosretro{
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 270px;
+}
+/*JUEGO DADOS*/
+.boton-dados { /*botones de tirar de cada jugador en los dados*/
+	color: black;
+	font-family: vcr;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	border: none;
+	border-radius: 0;
+	padding: 10px 10px;
+	letter-spacing: 0;
+	box-shadow: inset -2px -2px 0 #262626, inset 2px 2px 0 #f0f0f0, inset -4px -4px 0 #7e7e7e;
+	text-align: center;
+	margin: 8px auto;
+	width: 100px;
+}
+.boton-dados:hover {
+	background-color: #d9d9d9;
+    color: black;
+    cursor: pointer;
+}
+#tarjPreguntas { /*tarjeta de algunos contenedores*/
+	background-color:transparent;
+	width: 80%;
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+}
+#daditos { /*estilos contenedor de dados*/
+	width: 80%;
+	max-width: 1000px;
+	color: white;
+	background-color: rgb(36, 36, 36);
+	border: none;
+	border-radius: 0;
+	padding: 20px;
+	letter-spacing: 0;
+	box-shadow: inset -2px -2px 0 #262626, inset 2px 2px 0 #f0f0f0, inset -4px -4px 0 #7e7e7e;
+	margin: 20px auto;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+/*3er JUEGO: AHORCADO*/
+.ocultado { /*ignorar la gramatica(? */
+	color: transparent;
+}
+#tarjetaAhorcado { /*tarjetas contenedora del ahorcado*/
+	background-color: #868686;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: content;
+	padding: 20px;
+	margin: 10px auto;
+	color: black
+}
+#contadorPalabras { /*contiene casilleros donde se insertan las letras*/
+	margin-top: 20px;
+}
+.letra {
+	margin: 0 7px;
+	position: relative;
+	text-align: center;
+}
+.letra::after { /*espacio de cada caracter: linea de abajo*/
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+	min-width: 12px;
+}
+/*BIOGRAFIA*/
+.nosotras { /*foto de las creadoras de la página*/
+	margin: auto 10px 10px 5px;
+	padding: 10px;
+	width: 200px;
+
+}
+#biog { /*contenedor de la informacion d ela biografia*/
+	flex-wrap: wrap;
+	display: flex;
+   align-items: center;
+}

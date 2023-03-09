@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Juego De Dados</title>
+	<link rel="shortcut icon" href="img/icon.png">
+	<link rel="stylesheet" href="estilos.css"> <!--link a la hoja de estilos-->
+	<script src="user2.js"></script> <!--link al archivo externo de JavaScript-->
+</head>
+
+<body>
+<div id="contenedor">
+	<header>
+	<h1>COLECCION DE JUEGOS</h1>
+	
+	<h2>JUEGO DE DADOS</h2>
+	<nav> <!--MENÚ DE NAVEGACIÓN-->
+				<ul>
+					<li><a href="index.html">INICIO</a></li>
+					<li><a href="juego1.html">PREGUNTAS RETRO</a></li>
+					<li><a href="#">JUEGO DE DADOS</a></li>
+					<li><a href="juego3.html">AHORCADO</a></li>
+					<li><a href="bio.html">BIOGRAFIA</a></li>
+				</ul>
+			</nav>
+	</header>
+	<main>
+		<p class="tarjeta">Objetivo del juego: <br>
+			Este juego requiere de 2 jugadores. Ambos deberan sumar el puntaje más alto luego de 10 rondas. Si salen 3 dados iguales suman 3 puntos. 
+			Si salen 4 dados iguales suman 6 puntos. Si salen los 5 dados iguales suman 12 puntos. Cuando se suman puntos pasa el turno al siguiente jugador.
+			Si salen los 5 dados diferentes no suman puntos y pasa el turno al siguiente jugador. Al finalizar las 10 rondas el jugador que logró el mayor puntaje es el ganador. 
+			Si hay empate entre dos o más jugadores se debe habilitar una ronda más para desempatar.
+		</p>
+
+	<div class="control">
+		<input type="image" src="img/play.gif" alt="Boton play" id="boton-comienzo" class="btn-comienzo" onclick="empezarJuego();">
+	</div>
+			
+	<div class="oculto" id="tarjPreguntas" >
+		<div id="daditos">
+		
+		<div id="jugador1">
+			<h3> Jugador 1</h3>
+				<h4 id="puntos1">Puntaje del jugador 1: </h4>
+				<img src="img/dados/1.png" alt="Dado" id="dado1">
+				<img src="img/dados/1.png" alt="Dado" id="dado2">
+				<img src="img/dados/1.png" alt="Dado" id="dado3">
+				<img src="img/dados/1.png" alt="Dado" id="dado4">
+				<img src="img/dados/1.png" alt="Dado" id="dado5">	
+        </div>
+		
+        <form name="formulario1" id="form1">
+			<input type="button" value="TIRAR" class="boton-dados" id="boton1" onclick="jugador1();
+			this.disabled = true;
+			document.getElementById('boton2').disabled = false;
+			" disabled>
+		</form>
+		
+		<div id="jugador2">
+			<h3> Jugador 2</h3>
+				<h4 id="puntos2"> Puntaje del jugador 2: </h4>
+				<img src="img/dados/1.png" alt="Dado" id="dado11">
+				<img src="img/dados/1.png" alt="Dado" id="dado22">
+				<img src="img/dados/1.png" alt="Dado" id="dado33">
+				<img src="img/dados/1.png" alt="Dado" id="dado44">
+				<img src="img/dados/1.png" alt="Dado" id="dado55">	
+		</div>
+
+		<form name="formulario2" id="form2">
+			<input type="button" value="TIRAR" class="boton-dados" id="boton2" onclick="jugador2();
+			this.disabled = true;
+			document.getElementById('boton1').disabled = false;
+			" disabled>
+		</form>
+		
+</div>
+	</div>		
+	<div class="control">
+	<div id="boton-fin" class="oculto">
+		<h4 id="resultado">Resultado final: </h4>
+
+	<button 
+		id="boton-final" class="btn-comienzo" onclick="terminoJuego();">START AGAIN
+	</button>
+	</div>
+	</div><br>
+	
+</main>
+	<footer>
+		<h5>INFORMATICA GENERAL</h5>
+		<h6> created by: Victoria Cuomo y Paula Marghetich</h6>
+	</footer>
+</div>
+</body>
+</html>
